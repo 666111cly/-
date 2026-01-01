@@ -3,14 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我想对你说的话 | 烟花</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>我想对你说的话 | 贺总新年好</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #000;
+      background-image: url("./images/bg-words.jpg"); /* 可换自己喜欢的背景图 */
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+      font-family: "微软雅黑", sans-serif;
+      padding: 80px 20px 40px;
+    }
+    /* 导航栏 */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      z-index: 999;
+    }
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 8px 15px;
+      transition: all 0.3s;
+    }
+    .navbar a:hover {
+      color: #ff6b81;
+    }
+    /* 信件容器 */
+    .letter-box {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(255, 107, 129, 0.4);
+      line-height: 1.8;
+    }
+    .letter-title {
+      text-align: center;
+      color: #ff6b81;
+      font-size: 28px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .letter-content {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .letter-signature {
+      text-align: right;
+      font-size: 20px;
+      color: #ffd166;
+      margin-top: 40px;
+    }
+    /* 响应式适配手机 */
+    @media (max-width: 768px) {
+      .letter-box {
+        padding: 25px;
+        margin: 0 10px;
+      }
+      .letter-title {
+        font-size: 24px;
+      }
+      .letter-content {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- 导航栏 -->
   <nav class="navbar">
-    <!-- 全部改为【相对根路径】，适配HBuilderX本地预览和服务器部署 -->
     <a href="./index.html">首页</a>
     <a href="./beauty.html">你的美丽瞬间</a>
     <a href="./memory.html">我们的点滴</a>
@@ -18,33 +95,36 @@
     <a href="./reply.html">你的回信</a>
   </nav>
 
-  <!-- 烟花画布 -->
-  <canvas id="fireworks"></canvas>
-
-  <!-- 内容容器 -->
-  <div class="container">
-    <div class="letter">
-      <h2>致最亲爱的你 💌</h2>
-      <p>亲爱的朋友：</p>
-      <p>新年将至，提笔想对你说很多很多话～</p>
-      <p>还记得我们相识的那些日子吗？一起笑、一起闹，一起度过的每一个瞬间，都成为了我生命中最温暖的底色。</p>
-      <p>新的一年，愿你永远保持热爱，奔赴山海；愿你眼里有光，心中有爱，脚下有路。无论遇到什么，我都会一直在你身边。</p>
-      <p>感谢你的出现，让我的生活变得如此精彩。新的365天，我们继续并肩前行～</p>
-      <p style="text-align: right; margin-top: 30px;">爱你的朋友</p>
-      <p style="text-align: right;">2025新年</p>
+  <!-- 信件内容 -->
+  <div class="letter-box">
+    <h2 class="letter-title">致贺总的新年信</h2>
+    <div class="letter-content">
+      二零二六年，贺总新年好啊。祝你马年吉祥，一马当先（One hourse jia jia），马到成功（Hourse come win），马上发财（money come come），鲜衣怒马（good life），马上开心（Happynow）。
+    </div>
+    <div class="letter-content">
+      截止2026年1月1日，我们已经相识805天了。四季轮换，时光飞逝，我们已经从最开始的客客气气假正经儿，到现在的无话不说亲密无间，我们之间经历了太多太多。我们争吵和好，但我们还是在一起。
+    </div>
+    <div class="letter-content">
+      我不太会说漂亮话，我对你的依赖在我的肢体语言中。可能我总是凶凶的，但我们别扭的人就是这样的，我其实就是一个很别扭的人，但对你我很认真的。你热情开朗大方，跟你在一起我很舒服。我个人真认为我不是个爱说话的人，和你在一起不用说很多话，可以安安静静的听你分享，我很放松。而且你待人非常的真诚，所以我们真心换真心。
+    </div>
+    <div class="letter-content">
+      在你第一次和我提，可不可以有一个网站的时候我就开始做了，但中间因为一些事暂停了，嘿嘿😁。然后本来想12月31卡点发给你的，结果那天我偷懒在家看了一天电视晚上才开始调试，急急忙忙的，没弄好🌚。
+    </div>
+    <div class="letter-content">
+      让我们八百天的回忆在此刻见证，在这个网站留痕，我永远站在你的身边，爱你😘卷卷。
+    </div>
+    <div class="letter-signature">
+      爱你的人<br>
+      2026年1月1日
     </div>
   </div>
 
-  <!-- 音频 -->
- <audio id="bgMusic" loop autoplay>
-     <source src="audio/huangzi.mp3" type="audio/mpeg">
-     您的浏览器不支持音频播放
- </audio>
-  <audio id="firework-audio">
-    <source src="audio/firework.mp3" type="audio/mpeg">
-  </audio>
+  <!-- 背景音乐 -->
+  <audio id="background-audio" loop preload="auto">
+    <source src="./audio/huangzi.mp3" type="audio/mpeg">
+    你的浏览器不支持音频播放
+  
 
-  <!-- JS脚本 -->
-  <script src="js/main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
